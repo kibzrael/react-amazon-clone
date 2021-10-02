@@ -14,7 +14,7 @@ class Header extends Component<HeaderProps, HeaderState> {
 
   render() {
     return (
-      <div className="h-28 md:h-14 flex flex-col justify-between text-white bg-gray-800 px-7">
+      <div className="h-28 md:h-14 flex flex-col justify-between text-white bg-header px-7">
         <div className="h-14 py-1 flex flex-row items-center space-x-7  ">
           <img src="/logo1.png" alt="logo" className="h-10 mt-2" />
           {/* <text className="font-bold text-3xl text-left mb-1 ">Amazon</text> */}
@@ -54,7 +54,7 @@ const SearchField: FunctionComponent<SearchFieldProps> = (props) => {
       />
       <MdSearch
         size="56px"
-        className="p-2 min-w-max h-10 rounded-r bg-yellow-500"
+        className="p-2 min-w-max h-10 rounded-r bg-primary cursor-pointer"
       />
     </div>
   );
