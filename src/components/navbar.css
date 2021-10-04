@@ -1,5 +1,5 @@
 .navbar {
-  @apply hidden md:block items-center md:w-auto h-auto border-r border-gray-100 px-4 py-9 bg-gray-50;
+  @apply hidden md:flex flex-col md:w-auto h-auto border-r border-gray-200 px-4 py-9 bg-surface;
 }
 
 .section {
@@ -7,7 +7,7 @@
 }
 
 .title {
-  @apply text-lg font-bold mb-2;
+  @apply text-lg font-bold mb-2 whitespace-nowrap;
 }
 
 .settings {

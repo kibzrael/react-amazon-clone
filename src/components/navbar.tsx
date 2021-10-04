@@ -60,9 +60,9 @@ class NavBar extends React.Component<NavBarProps, NavBarState> {
             <p>Account</p>
           </div>
         </div>
-        <p className="text-center bg-primary mx-12 py-2 rounded-full text-white font-medium">
+        <button className="text-center bg-secondary px-4 py-2 mx-4 rounded-full text-white font-medium">
           Log Out
-        </p>
+        </button>
       </div>
     );
   }
@@ -77,7 +77,7 @@ interface ListItemProps {
 const ListItem: FunctionComponent<ListItemProps> = (props) => {
   return (
     <div className="flex flex-row justify-between items-center">
-      <p>{props.text}</p>
+      <p className="whitespace-nowrap">{props.text}</p>
       <MdKeyboardArrowRight size="24px" className="text-gray-500 ml-2" />
     </div>
   );
