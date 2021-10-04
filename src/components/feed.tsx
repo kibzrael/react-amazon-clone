@@ -1,10 +1,14 @@
 import React from "react";
 import FeedItem from "./feed_item";
+import "./feed.css";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 interface HomeFeedProps {}
 
 interface HomeFeedState {
   items: object[];
+  covers: string[];
+  current: number;
 }
 
 class HomeFeed extends React.Component<HomeFeedProps, HomeFeedState> {
@@ -47,13 +51,53 @@ class HomeFeed extends React.Component<HomeFeedProps, HomeFeedState> {
         img: "assets/items/pet.jpg",
       },
     ],
+    covers: [
+      "assets/furniture.jpg",
+      "assets/beauty.jpg",
+      "assets/computer.jpg",
+      "assets/games.jpg",
+      "assets/toys.jpg",
+      "assets/shipping.jpg",
+    ],
+    current: 0,
   };
+
+  next = () => {
+    var len = this.state.covers.length;
+    var next = this.state.current + 1 >= len ? 0 : this.state.current + 1;
+    this.setState({
+      current: next,
+    });
+  };
+
+  previous = ()=>{
+    var len = this.state.covers.length;
+    var previous = this.state.current-1<0? len-1 : this.state.current-1;
+    this.setState({
+        current:previous
+    })
+  }
+
   render() {
     return (
       <div className="relative">
-        <img src="assets/furniture.jpg" alt="funiture" className="" />
-        <div className="absolute top-28 p-6 sm:top-32 md:top-28 lg:top-36 xl:top-40 2xl:top-44 flex flex-grow w-full">
-          <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-6">
+        <img
+          src={this.state.covers[this.state.current]}
+          alt="funiture"
+          className="w-full object-cover object-top"
+        />
+        <MdKeyboardArrowLeft
+          size="56px"
+          onClick={this.previous}
+          className="absolute top-16 lg:top-24 left-4 text-white rounded-full bg-white bg-opacity-10 cursor-pointer"
+        />
+        <MdKeyboardArrowRight
+          size="56px"
+          onClick={this.next}
+          className="absolute top-16 lg:top-24 right-4 text-white rounded-full bg-white bg-opacity-10 cursor-pointer"
+        />
+        <div className="feed">
+          <div className="feedItems">
             {this.state.items.map((item, index) => {
               return <FeedItem key={index} img={item.img} title={item.title} />;
             })}

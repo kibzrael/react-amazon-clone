@@ -1,5 +1,6 @@
 .navbar {
-  @apply hidden md:flex flex-col md:w-auto h-auto border-r border-gray-200 px-4 py-9 bg-surface;
+  @apply hidden md:flex flex-col md:w-auto h-full border-r border-gray-200 px-4 py-9 bg-surface;
+  /* position: fixed; */
 }
 
 .section {

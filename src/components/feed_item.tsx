@@ -1,4 +1,5 @@
 import React from "react";
+import "./feed.css";
 
 interface FeedItemProps {
   title: string;
@@ -11,7 +12,7 @@ class FeedItem extends React.Component<FeedItemProps, FeedItemState> {
   state = {};
   render() {
     return (
-      <div className="col-span-1 flex flex-col justify-between p-4 bg-gray-50 rounded-sm shadow">
+      <div className="feedItem">
         <p className="font-bold text-xl">{this.props.title}</p>
 
         <div className="aspect-w-1 aspect-h-1 ">
