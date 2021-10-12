@@ -13,7 +13,9 @@ class FeedItem extends React.Component<FeedItemProps, FeedItemState> {
   render() {
     return (
       <div className="feedItem">
-        <p className="font-bold text-xl">{this.props.title}</p>
+        <p className="font-bold text-xl whitespace-nowrap overflow-hidden object-scale-down">
+          {this.props.title}
+        </p>
 
         <div className="aspect-w-1 aspect-h-1 ">
           <img

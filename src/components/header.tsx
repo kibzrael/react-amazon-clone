@@ -1,5 +1,6 @@
 import { Component, FunctionComponent } from "react";
 import { MdSearch, MdMenu } from "react-icons/md";
+import { Link } from "react-router-dom";
 import "./header.css";
 
 interface HeaderProps {}
@@ -30,23 +31,30 @@ class Header extends Component<HeaderProps, HeaderState> {
           <div className="md:hidden w-14 mr-3">
             <MdMenu size="42px" className="cursor-pointer" />
           </div>
-          <img src="/logo.png" alt="logo" className="h-10 mt-2" />
+          <Link to="/">
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="w-56 sm:w-32 lg:w-28 mt-2"
+            />
+          </Link>
           {/* <text className="font-bold text-3xl text-left mb-1 ">Amazon</text> */}
           <SearchField className="hidden ml-7 md:flex w-full flex-row" />
 
           <div className="w-full md:hidden"></div>
           <p
             onClick={this.changeName}
-            className="whitespace-nowrap font-semibold ml-7">
+            className="md:hidden whitespace-nowrap font-semibold ml-7">
             Hi, {this.state.name}
           </p>
-          <button
-            onClick={() => this.openCart()}
+          <Link
+            to="/cart"
+            // onClick={() => this.openCart()}
             className="flex flex-row space-x-1 ml-7 items-center">
             {/* <MdShoppingCart size="38px" className="" /> */}
             <Cart className="w-9 h-9" />
             <p className="hidden sm:block font-medium">Cart</p>
-          </button>
+          </Link>
         </div>
         <SearchField className="flex md:hidden w-full flex-row mb-3 " />
       </div>
@@ -71,10 +79,12 @@ const SearchField: FunctionComponent<SearchFieldProps> = (props) => {
         className="h-10 w-full px-5 py-3 bg-gray-100 text-gray-800 focus:outline-none min-w-max"
         placeholder="Search Amazon"
       />
-      <MdSearch
-        size="56px"
-        className="p-2 min-w-max h-10 rounded-r bg-primary cursor-pointer"
-      />
+      <Link to="/search">
+        <MdSearch
+          size="56px"
+          className="p-2 min-w-max h-10 rounded-r bg-primary cursor-pointer"
+        />
+      </Link>
     </div>
   );
 };
