@@ -1,6 +1,7 @@
 import React from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Item from "../item";
+import ItemLayout from "./item";
 
 interface SearchFeedProps {
   results: Item[];
@@ -23,7 +24,7 @@ class SearchFeed extends React.Component<SearchFeedProps, SearchFeedState> {
           </div>
         </div>
         {this.props.results.map((item: Item, index: number) => {
-          return <div key={index}>{item.title}</div>;
+          return <ItemLayout key={index} item={item} />;
         })}
       </div>
     );

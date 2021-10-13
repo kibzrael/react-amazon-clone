@@ -16,14 +16,14 @@ class Search extends React.Component<SearchProps, SearchState> {
         title:
           "Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset — 256 GB",
         price: 399,
-        rating: 4.7,
+        rating: 5,
         rateCount: 3891,
         photo: "assets/search/oculus 1.jpg",
       }),
       new Item({
         title: "Oculus Rift S PC-Powered VR Gaming Headset",
-        price: 399,
-        rating: 4.7,
+        price: 3,
+        rating: 4,
         rateCount: 3891,
         photo: "assets/search/oculus 2.jpg",
       }),
@@ -31,7 +31,7 @@ class Search extends React.Component<SearchProps, SearchState> {
         title:
           "Oculus Quest 2 Case SARLAR Hard Carrying Case for Oculus Quest 2/Elite Version VR Gaming Headset and Touch Controllers Accessories, Suitable for Travel and Home Storage.",
         price: 26,
-        rating: 4.7,
+        rating: 5,
         rateCount: 3891,
         photo: "assets/search/oculus 3.jpg",
       }),
@@ -39,14 +39,14 @@ class Search extends React.Component<SearchProps, SearchState> {
         title:
           "X-super Home Universal Desktop VR Headset Stand for Oculus Quest 2 ,Quest Rifts, Go, HTC Cosmos, Fits Touch Controllers Holder Virtual Reality Station Accessories",
         price: 24,
-        rating: 4.7,
+        rating: 5,
         rateCount: 3891,
         photo: "assets/search/oculus 4.jpg",
       }),
       new Item({
         title: "Oculus Rift - Virtual Reality Headset",
         price: 399,
-        rating: 4.7,
+        rating: 4,
         rateCount: 3891,
         photo: "assets/search/oculus 5.jpg",
       }),

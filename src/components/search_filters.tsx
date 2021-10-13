@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import "./navbar.css";
 
 interface SearchFiltersProps {}
@@ -14,7 +14,7 @@ class SearchFilters extends React.Component<
     return (
       <div className="navbar">
         <div className="filter_section">
-          <p className="title">Department</p>
+          <h1 className="title">Department</h1>
           <p>Any</p>
           <p>Wearable Technology</p>
           <p>Accessories & Supplies</p>
@@ -23,11 +23,14 @@ class SearchFilters extends React.Component<
           <p>Video Game Accessories</p>
         </div>
         <div className="filter_section">
-          <p className="title">Customer Review</p>
+          <h1 className="title">Customer Review</h1>
+          <Rating rating={5} />
+          <Rating rating={4} />
+          <Rating rating={3} />
         </div>
 
         <div className="filter_section">
-          <p className="title">Brands</p>
+          <h1 className="title">Brands</h1>
           <p>Oculus</p>
           <p>MASiKEN</p>
           <p>Ahroy</p>
@@ -36,7 +39,7 @@ class SearchFilters extends React.Component<
         </div>
 
         <div className="filter_section">
-          <p className="title">Price</p>
+          <h1 className="title">Price</h1>
           <p>Under $25</p>
           <p>$25 to $50</p>
           <p>$50 to $100</p>
@@ -45,13 +48,13 @@ class SearchFilters extends React.Component<
         </div>
 
         <div className="filter_section">
-          <p className="title">Condition</p>
+          <h1 className="title">Condition</h1>
           <p>New</p>
           <p>Used</p>
         </div>
 
         <div className="filter_section">
-          <p className="title">Availability</p>
+          <h1 className="title">Availability</h1>
           <p>Include Out of Stock</p>
         </div>
       </div>
@@ -60,3 +63,20 @@ class SearchFilters extends React.Component<
 }
 
 export default SearchFilters;
+
+interface RatingProps {
+  rating: number;
+}
+
+const Rating: FunctionComponent<RatingProps> = ({ ...props }) => {
+  return (
+    <div className="flex flex-row space-x-2 items-center">
+      <img
+        className="w-20 h-8 object-cover"
+        src={`assets/rating/rating-${props.rating}.svg`}
+        alt=""
+      />
+      <p>{props.rating + " stars"}</p>
+    </div>
+  );
+};

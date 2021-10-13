@@ -1,6 +1,12 @@
 .navbar {
-  @apply hidden md:flex flex-col md:w-auto h-full border-r border-gray-200 px-4 py-9 bg-surface;
+  @apply hidden md:flex flex-col md:w-auto whitespace-nowrap h-full border-r border-gray-200 px-4 py-9 bg-surface;
   /* position: fixed; */
+}
+
+@layer base {
+  p {
+    @apply hover:text-primary cursor-pointer;
+  }
 }
 
 .section {

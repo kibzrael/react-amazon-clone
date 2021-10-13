@@ -29,13 +29,13 @@ class NavBar extends React.Component<NavBarProps, NavBarState> {
           </div>
         </div>
         <div className="section">
-          <p className="title">Digital Content & Devices</p>
+          <h1 className="title">Digital Content & Devices</h1>
           <ListItem text="Amazon Music" />
           <ListItem text="Kindle E-readers & Books" />
           <ListItem text="Appstore for Android" />
         </div>
         <div className="section">
-          <p className="title">Shop By Department</p>
+          <h1 className="title">Shop By Department</h1>
           <ListItem text="Electronics" />
           <ListItem text="Computers" />
           <ListItem text="Smart Home" />
@@ -46,7 +46,7 @@ class NavBar extends React.Component<NavBarProps, NavBarState> {
           </div>
         </div>
         <div className="section">
-          <p className="title">Help & Settings</p>
+          <h1 className="title">Help & Settings</h1>
           <div className="settings">
             <MdLanguage size="24px" />
             <p>English</p>
